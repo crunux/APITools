@@ -3,7 +3,8 @@ import uvicorn
 
 import routers.router_sendmail as router_sendmail
 
-app = FastAPI(title="SendMail API", description="API to send email", version="1.0.0")
+app = FastAPI(title="API Tools - Crunux",
+              description="API to use kinds different endpoints for personal used", version="0.0.1")
 
 app.include_router(router_sendmail.router, prefix="/api/v1")
 
