@@ -1,2 +1,2 @@
 from .sendMail import sendMail
-from .models import sendMailBody
+from .models import sendMailBody, ResponseReturnEmail

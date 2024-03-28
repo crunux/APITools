@@ -1,11 +1,10 @@
 from fastapi import APIRouter, HTTPException, status
-from domain import sendMailBody, sendMail
+from domain import sendMailBody, sendMail, ResponseReturnEmail
 
 router = APIRouter()
 
-
 @router.post("/sendmail", tags=["sendmail"])
-async def sendmail(content: sendMailBody):
+async def sendmail(content: sendMailBody) -> ResponseReturnEmail:
     try:
         response = sendMail(content)
     except Exception as e:
